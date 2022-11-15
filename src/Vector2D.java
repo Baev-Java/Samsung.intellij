@@ -9,6 +9,8 @@ public class Vector2D {
     Vector2D() { //начальные кординаты вектора
         vX = 1;
         vY = 1;
+        count++;
+
     }
 
     Vector2D(double vX, double vY) {
@@ -20,6 +22,7 @@ public class Vector2D {
     public Vector2D(Vector2D other) {
         vX = other.vX;
         vY = other.vY;
+        count++;
     }
 
     public double length() {
@@ -32,8 +35,8 @@ public class Vector2D {
     }
 
     public void sub(Vector2D v) {//вычитание двух векторов
-        this.vY = vY - v.vY;
-        this.vX = vX - v.vX;
+        vY -= v.vY;
+        vX -= v.vX;
     }
 
     public void scale(double scaleFactor) {//умножение двух векторов
